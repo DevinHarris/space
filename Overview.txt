@@ -1,0 +1,42 @@
+Space App:
+
+Tools: MEAN Stack || Meteor
+Foursquare API,
+Google Maps,
+
+
+Features: 
+1) Returns a list of cool places near the user (Movies, Malls, Stores, Grocery) 
+2) User can get directions - Google Maps API
+3) User can get personal results: 
+"I would like to:"
+(food, drinks, coffee, shops, arts, outdoors, sights, trending)
+3) Added: If Movie, a user can see show times
+4) Added: A user can save "Spaces" if they return to that area. 
+"Hey, we see you're back in [city name]. Would you like to see your saved "spaces"?"
+4a) Won't show if it's a user's home. localStorage: User's home. 
+
+
+URL:
+https://api.foursquare.com/v2/venues/search?near=32.7918963,-83.6029116&intent=browse&radius=25000
+
+ID:
+1) Movie: 4bf58dd8d48988d17f941735
+2) Museum: 4bf58dd8d48988d181941735 
+3) Stadium: 4bf58dd8d48988d184941735
+4) Theme Park: 4bf58dd8d48988d182941735
+5) Water Park: 4bf58dd8d48988d193941735 
+6) 
+7) Event: 4d4b7105d754a06373d81259 
+8) Food: 4d4b7105d754a06374d81259 
+9) Gym / Fitness Center: 4bf58dd8d48988d175941735 
+10) Mall: 4bf58dd8d48988d1fd941735 
+11)  Music Store: 4bf58dd8d48988d1fe941735 
+12) Food & Drink Shop: 4bf58dd8d48988d1f9941735 
+13) Clothing Store: 4bf58dd8d48988d103951735 
+
+33.749,-84.38798
+
+List: 
+4bf58dd8d48988d17f941735,4bf58dd8d48988d181941735,4bf58dd8d48988d184941735,4bf58dd8d48988d193941735,4d4b7105d754a06373d81259,
+4d4b7105d754a06374d81259,4bf58dd8d48988d175941735,4bf58dd8d48988d1fd941735,4bf58dd8d48988d1fe941735,4bf58dd8d48988d1f9941735,4bf58dd8d48988d103951735 
