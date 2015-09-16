@@ -11,8 +11,12 @@ angular.module('Space')
 						enableHighAccuracy: true
 					};
 
+				function geoError()	 {
+					alert('Opps. Looks like you have your location turned off. Space uses your location to find places near you.');
+				}
+
 				return $q(function(resolve){
-					geoLoc.getCurrentPosition(function(position, geoOptions) {
+					geoLoc.getCurrentPosition(function(position, geoOptions, geoError) {
 					var lat = position.coords.latitude,
 						lng = position.coords.longitude;
 
