@@ -6,11 +6,17 @@
 	<link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/styles.css">
 	<base href="/">
+
+	<style>
+		[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+			  display: none !important;
+			}
+	</style>
 </head>
 <body>
 	<div class="container" ng-controller="MainCtrl as main">
 		<h1 ng-if="main.loading">Hang on. Getting your location and Spaces...</h1>
-		<div class="space" ng-repeat="place in main.place">
+		<div class="space" ng-repeat="place in main.place" ng-cloak>
 			<div class="place-info">
 				<a href="{{place.url}}" class="place-name"><h2>{{place.name}}</h2></a>
 				<p class="address">{{place.location.address}} - {{place.location.city}}</p>
