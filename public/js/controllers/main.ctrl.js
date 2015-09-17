@@ -7,6 +7,7 @@ angular.module('Space')
 		getPlaces.getPlaces().then(function(data) {
 			vm.place = data.venues;
 			console.log(vm.place);
+			vm.cityName = vm.place[0].location.city;
 			vm.loading = false;
 		});
 

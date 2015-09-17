@@ -8,12 +8,16 @@ angular.module('Space')
 			if (navigator.geolocation) {
 				var geoLoc = navigator.geolocation, 
 					geoOptions = {
-						enableHighAccuracy: true
+						enableHighAccuracy: true,
+						timeout: 4000
 					};
 
 				function geoError()	 {
 					alert('Opps. Looks like you have your location turned off. Space uses your location to find places near you.');
 				}
+
+				// return a promise, because getCurrentPosition() doesn't return anything. 
+				// $q(resolve) returns the promise from getFSinfo();
 
 				return $q(function(resolve){
 					geoLoc.getCurrentPosition(function(position, geoOptions, geoError) {
