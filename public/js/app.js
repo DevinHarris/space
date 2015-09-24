@@ -1,4 +1,4 @@
-angular.module('Space', ['ngRoute'])
+angular.module('Space', ['ngRoute', 'ngAnimate'])
 	.config(function($routeProvider, $locationProvider) {
 		$routeProvider
 			.when('/', {
