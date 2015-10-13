@@ -58,6 +58,8 @@ angular.module('Space')
 						searchIds += categoryIds[key] + ',';
 					}
 
+					searchIds = searchIds.substr(0, searchIds.length -1);
+
 					var FSUrl = 'https://api.foursquare.com/v2/venues/search?ll=' + coords + '&client_id=' + clientID + '&client_secret=' + 
 					clientSercet +'&intent=browse&radius=20000' + '&categoryId=' + searchIds + '&v=20130815' + '&limit=50';
 
