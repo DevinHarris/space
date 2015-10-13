@@ -30,7 +30,6 @@ body {
 		min-width: 100%;
 		width: auto;
 		height: auto;
-		background: url(../img/bg.jpg) center center no-repeat;
 		background-size: cover;
 		z-index: -102;
 
@@ -181,6 +180,14 @@ body {
 }
 
 @media all and (max-width: 500px) {
+
+	#video-bg {
+		display: none;
+	}
+
+	.container {
+	background: url(../img/bg.jpg) center center no-repeat;
+	}
 	
 	.logo {
 			margin: 0 20px 0 20px;
