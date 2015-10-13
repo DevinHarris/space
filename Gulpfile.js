@@ -1,21 +1,21 @@
 var gulp = require('gulp'),
-	sass = require('gulp-sass'),
-	livereload = require('gulp-livereload');
+	sass = require('gulp-sass');
 
 
 gulp.task('sass', function() {
-	gulp.src('./public/css/*.scss')
+	return gulp.src('./public/css/*.scss')
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-		.pipe(gulp.dest('./public/css'))
-		.pipe(livereload());
+		.pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('reload', function() {
-	gulp.src('./public/index.html')
-		.pipe(livereload());
+gulp.task('html', function() {
+	return gulp.src('./public/index.html');
 });
 
-gulp.task('default', function() {
+gulp.task('watch', function() {
 	gulp.watch('./public/css/*.scss', ['sass']);
-	gulp.watch('./public.index.html', ['reload']);
+	gulp.watch('./public.index.html', ['html']);
+
 });
+
+gulp.task('default', ['watch', 'sass']);

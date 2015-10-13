@@ -31,7 +31,7 @@ body {
 		height: auto;
 		background: url(../img/bg.jpg) center center no-repeat;
 		background-size: cover;
-		z-index: -103;
+		z-index: -102;
 
 	}
 
@@ -71,6 +71,7 @@ body {
 
 	.cta {
 		margin-top: 130px;
+		overflow: hidden;
 
 		h1 {
 			font-weight: 500;
@@ -82,7 +83,7 @@ body {
 			margin-top: 50px;
 			padding: 13px;
 			width: 300px;
-			background-color: #D5116B;
+			background-color: #D5116B; /* #FB7D7D */
 			color: #fff;
 			border-radius: 5px;
 			font-family: 'Roboto', sans-serif;
